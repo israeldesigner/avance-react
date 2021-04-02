@@ -1,0 +1,95 @@
+.colorWhite{
+    color:$white;
+}
+.colorBlueDarken{
+    color: $blue-darken;
+}
+.colorBlue{
+    color: $blue;
+}
+.colorOrange{
+    color: $orange;
+}
+.colorGreen{
+    color: $green;
+}
+.colorYellow{
+    color: $yellow;
+}
+.colorGray{
+    color:$gray !important;
+}
+
+.bgGrayLight{
+    background:$gray-light;
+}
+.bgWhite{
+    background: $white;
+}
+.bgOrange{
+    background: $orange;
+    @extend .colorWhite;
+}
+.bgBlueDarken{
+    background: $blue-darken;
+    @extend .colorWhite;
+}
+.bgBlue{
+    background: $blue;
+    @extend .colorWhite;
+}
+.bgYellow{
+    background: $yellow;
+    @extend .colorWhite;  
+}
+.bgGreen{
+    background: $green;
+    @extend .colorWhite;  
+}
+
+.btn{
+    @include transition(background-color .4s, color .3s .2s,);
+}
+
+.buttonMain{
+    @include border-radius(8px);
+    @extend .colorWhite;
+    text-align: center;
+    &:hover{
+        opacity: 0.85;
+        color: $white !important;
+    }
+
+}
+.buttonGhost{
+    background: none;
+    @extend .buttonMain;
+}
+
+.buttonOrange{
+    @extend .bgOrange;
+    &:focus{
+        box-shadow: 0 0 0 0.2rem rgba(253, 104, 4, 0.712);
+    }
+}
+.buttonBlue{
+    @extend .bgBlue;
+    &:hover{
+        @extend .bgWhite;
+        @extend .colorBlue;
+    }
+    &:focus{
+        box-shadow: 0 0 0 0.2rem rgba(78, 95, 241, 0.712);
+    }
+}
+.buttonGreen{
+    @extend .bgGreen;
+    &:hover{
+        @extend .bgWhite;
+        @extend .colorGreen;
+        border: 2px solid $green;
+    }
+    &:focus{
+        box-shadow: 0 0 0 0.2rem rgba(78, 95, 241, 0.712);
+    }
+}

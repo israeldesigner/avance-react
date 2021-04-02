@@ -1,0 +1,86 @@
+.sectionInfo{
+    @extend .bgWhite;
+    padding: 10px;
+    border-bottom: 1px solid $gray-light;
+    .sectionInfo-social{
+        margin-right: 10px;
+        padding-right: 10px;
+        a{
+            i{
+                width: 35px;
+                text-align: center;
+                padding: 10px;
+                @extend .bgBlue;
+                @include border-radius(50%);
+                @include transition(color .3s .2s);
+                &:hover{
+                    @extend .bgWhite;
+                    @extend .colorBlue;
+                    border: 1px solid $blue;
+                }
+            }
+        }
+    }
+
+    .sectionInfo-tel{
+        @extend .buttonGreen;
+    }
+}
+
+.custom-navbar {
+    -webkit-box-shadow:  0px 4px 5px  rgba(25,25,25, .4);
+    -moz-box-shadow:  0px 4px 5px  rgba(25,25,25, .4);
+    box-shadow:  0px 4px 5px rgba(25,25,25, .4);
+    background-color: $white;
+    z-index: 1;
+    .logoRenda{
+        width: 225px;
+    }
+}
+
+.nav-link {
+    margin-right: 15px;
+    @extend .colorBlue;
+    &:hover{
+        opacity: 0.75;
+    }
+}
+
+.navbar-nav .nav-link{
+    font-size: large !important;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: $blue;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,123,255, 1.0)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    width: 18px!important;
+}
+
+.navbar-toggler:focus{
+    outline: 0px !important;
+}
+
+.custom-toggler:hover {
+    border-color: $white;
+    background-color: $blue;
+}
+
+.navbar-toggler-icon:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+#logo_custom {
+    margin-top: -6px;
+}
+
+@media only screen and (max-width: 760px) {
+    #logo_custom {
+        width: 40%;
+    }
+}
