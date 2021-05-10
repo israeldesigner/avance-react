@@ -9,7 +9,6 @@ import $ from 'jquery';
       $('#loader-wrapper').fadeOut();
     };
     loadPage();
-    console.log('testando');
     const $body = $('body');
     $(document).on('click', '.side-panel-trigger', () => {
       $body.toggleClass('side-panel-open');
